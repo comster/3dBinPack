@@ -37,7 +37,7 @@
     }
     
     var normalizeNum = function(n) {
-        return Math.floor(n * 1000);
+        return Math.floor(n * 100);
     }
     
     ThreeDimensionBinPack.Bin.prototype.getBoxFileStr = function() {
