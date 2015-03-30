@@ -2,7 +2,7 @@
   "name": "3dBinPack",
   "version": "0.0.1",
   "dependencies": {
-    // "underscore": "latest"
+    "underscore": "latest"
   },
   "devDependencies": {
   },
