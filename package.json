@@ -1,0 +1,21 @@
+{
+  "name": "3dBinPack",
+  "version": "0.0.1",
+  "dependencies": {
+    // "underscore": "latest"
+  },
+  "devDependencies": {
+  },
+  "main": "index.js",
+  "optionalDependencies": {},
+  "engines": {
+    "node": "*"
+  },
+  "author": "Jeff Pelton <j@jeffpelton.com> (jeffpelton.com)",
+  "description": "Module for https://github.com/exad/boxologic",
+  "homepage": "https://github.com/comster/3dBinPack",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/comster/3dBinPack.git"
+  }
+}
