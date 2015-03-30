@@ -31,12 +31,15 @@
     
     ThreeDimensionBinPack.Bin.prototype.doesFit = function(callback) {
         this.runCalc(function(result){
-            console.log(result);
+            // console.log(result);
             callback(result.TotalBoxes === result.PackedBoxes);
         });
     }
     
     var normalizeNum = function(n) {
+        if(typeof n === 'string') {
+            n = parseFloat(n);
+        }
         return Math.floor(n * 100);
     }
     
@@ -105,7 +108,7 @@
             runOutput = runOutput + data.toString();
         });
         spawnBoxologic.stderr.on("data", function(data) {
-            console.log("stderr: " + data);
+            console.log("spawnBoxologic.stderr: " + data);
             console.dir(data);
             // runOutput = runOutput + data;
         });
