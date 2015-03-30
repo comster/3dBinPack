@@ -36,14 +36,18 @@
         });
     }
     
+    var normalizeNum = function(n) {
+        return Math.floor(n * 1000);
+    }
+    
     ThreeDimensionBinPack.Bin.prototype.getBoxFileStr = function() {
         var str = '';
         
-        str = this.dimH + ', ' + this.dimW + ', ' + this.dimD; // container
+        str = normalizeNum(this.dimH) + ', ' + normalizeNum(this.dimW) + ', ' + normalizeNum(this.dimD); // container
         // console.log(this.packages)
         for(var p in this.packages) {
             var pack = this.packages[p];
-            str = str + '\n' + (parseInt(p, 10)+1) + '. ' + pack[0] + ', ' + pack[1] + ', '+pack[2]+', 1';
+            str = str + '\n' + (parseInt(p, 10)+1) + '. ' + normalizeNum(pack[0]) + ', ' + normalizeNum(pack[1]) + ', ' + normalizeNum(pack[2]) +', 1';
         }
         str = str + '\n';
         // EXAMPLE OUTPUT
