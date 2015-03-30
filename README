@@ -4,20 +4,18 @@
 Find out if a bin can contain the given packages.
 
 Example usage:
+
     var ThreeDimensionBinPack = require('./index.js')();
     
     // Create a bin with dimensions h, w, d
-    
     var bin = new ThreeDimensionBinPack.Bin(10, 9, 11);
     
-    // Add packages to the bin
-    
+    // Add your packages to the bin
     bin.addPackage(2,4,8);
     bin.addPackage(2,2,10);
     bin.addPackage(2,5,10);
     
     // Determine if the packages will fit into the bin
-    
     bin.doesFit(function(packagesFitInsideBin){
         console.log('does it fit? '+packagesFitInsideBin);
     });
